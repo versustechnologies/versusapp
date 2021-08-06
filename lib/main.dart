@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'auth/firebase_user_provider.dart';
 import 'package:versus/login_page/login_page_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
+import 'home/home_widget.dart';
 import 'explore/explore_widget.dart';
 import 'friends/friends_widget.dart';
 import 'account/account_widget.dart';
-import 'home/home_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -75,15 +75,22 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
+      'Home': HomeWidget(),
       'Explore': ExploreWidget(),
       'Friends': FriendsWidget(),
       'Account': AccountWidget(),
-      'Home': HomeWidget(),
     };
     return Scaffold(
       body: tabs[_currentPage],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              size: 24,
+            ),
+            label: 'Explore',
+          ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.search,
@@ -109,13 +116,6 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24,
             ),
             label: 'Account',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              size: 24,
-            ),
-            label: 'Explore',
           )
         ],
         backgroundColor: Color(0xFF14181B),

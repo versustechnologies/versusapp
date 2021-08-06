@@ -1,49 +1,34 @@
 {
   "project_info": {
-    "project_number": "996585139099",
-    "project_id": "fluttermet",
-    "storage_bucket": "fluttermet.appspot.com"
+    "project_number": "420200840134",
+    "project_id": "versus-aefd8",
+    "storage_bucket": "versus-aefd8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:996585139099:android:1e36ca168827ee6552cf3e",
+        "mobilesdk_app_id": "1:420200840134:android:a17371bb210652476d10c7",
         "android_client_info": {
-          "package_name": "com.flutterflow.fluttermet"
+          "package_name": "com.flutterflow.versus"
         }
       },
       "oauth_client": [
         {
-          "client_id": "996585139099-rivuqb3586ou7iimokqagorsmnfh23o0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.flutterflow.fluttermet",
-            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
-          }
-        },
-        {
-          "client_id": "996585139099-187f7h1tdp5gapma8f2g569ki3pr0o02.apps.googleusercontent.com",
+          "client_id": "420200840134-8ul9b0t4drb6337p8tk3p2tiia36gnm4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAzWPSmwNXIVRCaDUJdTCbPaY6kytlkziA"
+          "current_key": "AIzaSyB8xIjgztuX4wdg7o1vYLrcReGBI3z3rIk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "996585139099-187f7h1tdp5gapma8f2g569ki3pr0o02.apps.googleusercontent.com",
+              "client_id": "420200840134-8ul9b0t4drb6337p8tk3p2tiia36gnm4.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "996585139099-h5euoodv05lrgpi0hmghcqreno540v5n.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.flutterflow.fluttermet"
-              }
             }
           ]
         }

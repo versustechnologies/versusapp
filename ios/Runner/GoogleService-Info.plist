@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>996585139099-h5euoodv05lrgpi0hmghcqreno540v5n.apps.googleusercontent.com</string>
+	<string>420200840134-ibv4th5g8o9g4v81jlql4i05toofhkrg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.996585139099-h5euoodv05lrgpi0hmghcqreno540v5n</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>996585139099-rivuqb3586ou7iimokqagorsmnfh23o0.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.420200840134-ibv4th5g8o9g4v81jlql4i05toofhkrg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyADDH9qDO9B4TSNQEOLu7IASg1qkTZSfqw</string>
+	<string>AIzaSyBhoz3Q9oGRPSHFk3u-xmJVeLmFKfbsFJ8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>996585139099</string>
+	<string>420200840134</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.flutterflow.fluttermet</string>
+	<string>com.flutterflow.versus</string>
 	<key>PROJECT_ID</key>
-	<string>fluttermet</string>
+	<string>versus-aefd8</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fluttermet.appspot.com</string>
+	<string>versus-aefd8.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:996585139099:ios:a13c1e0c2da428f852cf3e</string>
+	<string>1:420200840134:ios:a23fbd586f8c26846d10c7</string>
 </dict>
 </plist>
