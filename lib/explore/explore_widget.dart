@@ -23,7 +23,7 @@ class _ExploreWidgetState extends State<ExploreWidget> {
   @override
   void initState() {
     super.initState();
-    textController = TextEditingController(text: widget.searchTerm);
+    textController = TextEditingController();
   }
 
   @override
