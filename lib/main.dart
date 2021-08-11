@@ -7,6 +7,7 @@ import 'home/home_widget.dart';
 import 'explore/explore_widget.dart';
 import 'friends/friends_widget.dart';
 import 'account/account_widget.dart';
+import 'home_copy/home_copy_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -79,6 +80,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'Explore': ExploreWidget(),
       'Friends': FriendsWidget(),
       'Account': AccountWidget(),
+      'HomeCopy': HomeCopyWidget(),
     };
     return Scaffold(
       body: tabs[_currentPage],
@@ -116,6 +118,13 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24,
             ),
             label: 'Account',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.texture,
+              size: 26,
+            ),
+            label: 'Home',
           )
         ],
         backgroundColor: Color(0xFF14181B),
