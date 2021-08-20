@@ -1,4 +1,5 @@
 import '../auth/auth_util.dart';
+import '../backend/api_requests/api_calls.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -15,6 +16,7 @@ class HomeCopyWidget extends StatefulWidget {
 }
 
 class _HomeCopyWidgetState extends State<HomeCopyWidget> {
+  dynamic result;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -158,8 +160,12 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                 }
                                 final optionBTopicsRecord = snapshot.data;
                                 return FFButtonWidget(
-                                  onPressed: () {
-                                    print('OptionB pressed ...');
+                                  onPressed: () async {
+                                    result = await testCall(
+                                      name: 'Kevin is awesome',
+                                    );
+
+                                    setState(() {});
                                   },
                                   text: optionBTopicsRecord.name,
                                   options: FFButtonOptions(
@@ -182,7 +188,7 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                             ),
                           ),
                           Text(
-                            'Counter B',
+                            getJsonField(result, r'$.message').toString(),
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Playfair Display',
                               fontSize: 10,
