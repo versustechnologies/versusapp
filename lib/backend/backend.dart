@@ -7,6 +7,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'schema/users_record.dart';
 import 'schema/versus_record.dart';
 import 'schema/topics_record.dart';
+import 'schema/votes_record.dart';
 import 'schema/serializers.dart';
 
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -16,6 +17,7 @@ export 'schema/serializers.dart';
 export 'schema/users_record.dart';
 export 'schema/versus_record.dart';
 export 'schema/topics_record.dart';
+export 'schema/votes_record.dart';
 
 Stream<List<UsersRecord>> queryUsersRecord(
         {Query Function(Query) queryBuilder,
@@ -36,6 +38,13 @@ Stream<List<TopicsRecord>> queryTopicsRecord(
         int limit = -1,
         bool singleRecord = false}) =>
     queryCollection(TopicsRecord.collection, TopicsRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Stream<List<VotesRecord>> queryVotesRecord(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollection(VotesRecord.collection, VotesRecord.serializer,
         queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
 
 Stream<List<T>> queryCollection<T>(

@@ -1,7 +1,9 @@
+import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,6 +70,13 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          Text(
+                            'Counter A',
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Playfair Display',
+                              fontSize: 10,
+                            ),
+                          ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                             child: StreamBuilder<TopicsRecord>(
@@ -88,8 +97,19 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                 }
                                 final optionATopicsRecord = snapshot.data;
                                 return FFButtonWidget(
-                                  onPressed: () {
-                                    print('OptionA pressed ...');
+                                  onPressed: () async {
+                                    final votesCreateData =
+                                        createVotesRecordData(
+                                      createdTime: getCurrentTimestamp,
+                                      user: currentUserReference,
+                                      votedA: true,
+                                      votedB: false,
+                                      votedVersus:
+                                          listViewVersusRecord.reference,
+                                    );
+                                    await VotesRecord.collection
+                                        .doc()
+                                        .set(votesCreateData);
                                   },
                                   text: optionATopicsRecord.name,
                                   options: FFButtonOptions(
@@ -159,6 +179,13 @@ class _HomeCopyWidgetState extends State<HomeCopyWidget> {
                                   ),
                                 );
                               },
+                            ),
+                          ),
+                          Text(
+                            'Counter B',
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Playfair Display',
+                              fontSize: 10,
                             ),
                           )
                         ],

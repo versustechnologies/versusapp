@@ -9,7 +9,16 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'lat_lng.dart';
 
+export 'lat_lng.dart';
+export 'place.dart';
+
+T valueOrDefault<T>(T value, T defaultValue) =>
+    (value is String && value.isEmpty) || value == null ? defaultValue : value;
+
 String dateTimeFormat(String format, DateTime dateTime) {
+  if (dateTime == null) {
+    return '';
+  }
   if (format == 'relative') {
     return timeago.format(dateTime);
   }
@@ -88,4 +97,11 @@ void showSnackbar(
       duration: Duration(seconds: duration),
     ),
   );
+}
+
+extension FFStringExt on String {
+  String maybeHandleOverflow({int maxChars, String replacement = ''}) =>
+      maxChars != null && length > maxChars
+          ? replaceRange(maxChars, null, replacement)
+          : this;
 }
